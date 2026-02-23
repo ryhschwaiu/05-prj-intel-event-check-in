@@ -6,7 +6,7 @@ const attendanceTracker = document.querySelector(".attendance-tracker");
 
 // Track attendance
 let count = 0;
-const maxCount = 2;
+const maxCount = 50;
 
 // Helper function to calculate percentage
 function calculatePercentage() {
