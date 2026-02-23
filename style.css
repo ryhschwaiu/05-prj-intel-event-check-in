@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -237,13 +238,59 @@ button .fas {
   transition: width 0.6s ease;
 }
 
+.pulse {
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.team-card.water.winner {
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.3) 0%,
+    rgba(14, 165, 233, 0.3) 100%
+  );
+  border: 2px solid #0ea5e9;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+}
+
+.team-card.zero.winner {
+  background: linear-gradient(
+    135deg,
+    rgba(74, 222, 128, 0.3) 0%,
+    rgba(34, 197, 94, 0.3) 100%
+  );
+  border: 2px solid #22c55e;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+}
+
+.team-card.power.winner {
+  background: linear-gradient(
+    135deg,
+    rgba(251, 146, 60, 0.3) 0%,
+    rgba(249, 115, 22, 0.3) 100%
+  );
+  border: 2px solid #f97316;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+}
+
 /* Adjust spacing between components */
 .container {
   margin-top: 0;
 }
 
 /* Messages */
-#greeting {
+.message-box {
   font-weight: 500;
   font-size: 18px;
   padding: 16px 20px;
@@ -253,9 +300,43 @@ button .fas {
   display: none;
 }
 
+.message-box.is-visible {
+  display: block;
+}
+
 .success-message {
   background-color: #e8f4fc;
   color: #003c71;
+}
+
+.message-box.winner.water {
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.2) 0%,
+    rgba(14, 165, 233, 0.2) 100%
+  );
+  border: 2px solid #0ea5e9;
+  color: #0c4a6e;
+}
+
+.message-box.winner.zero {
+  background: linear-gradient(
+    135deg,
+    rgba(74, 222, 128, 0.2) 0%,
+    rgba(34, 197, 94, 0.2) 100%
+  );
+  border: 2px solid #22c55e;
+  color: #15803d;
+}
+
+.message-box.winner.power {
+  background: linear-gradient(
+    135deg,
+    rgba(251, 146, 60, 0.2) 0%,
+    rgba(249, 115, 22, 0.2) 100%
+  );
+  border: 2px solid #f97316;
+  color: #92400e;
 }
 
 /* Counter */
@@ -346,6 +427,25 @@ select {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+.team-attendee-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.team-attendee-item {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
 }
 
 /* Mobile responsive */
